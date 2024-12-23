@@ -1,0 +1,14 @@
+services:
+  app:
+    container_name: pow
+    build: .
+    volumes:
+      - ./src:/home/app
+    networks:
+      - default
+    tty: true
+
+networks:
+  default:
+    name: pow-network
+    driver: bridge

@@ -1,0 +1,8 @@
+version: '3.2.1'
+
+tasks:
+  build:
+    desc:
+      Build Go binary file
+    cmds:
+      - GOOS=linux GOARCH=arm64 CGO_ENABLED=0 go build -tags lambda.norpc -o ./bin/bootstrap ./cmd/pow/main.go
